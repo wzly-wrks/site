@@ -1,4 +1,4 @@
-/* weezly.works - Synthwave Theme
+﻿/* weezly.works - Synthwave Theme
    Created by SuperNinja AI - 2025 */
 
 /* ===== CSS Variables ===== */
@@ -442,11 +442,8 @@ nav.scrolled {
 
 /* ===== Tandy Computer Section ===== */
 .tandy-section {
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-xl) 0;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .tandy-container {
@@ -454,56 +451,372 @@ nav.scrolled {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
 }
 
 .tandy-border {
   position: relative;
-  width: 40%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
-  display: block;
 }
 
 .tandy-border-img {
   width: 100%;
   height: auto;
   display: block;
-  position: relative;
-  z-index: 2;
 }
 
 .tandy-screen {
   position: absolute;
-  top: 12%;
-  left: 11%;
-  width: 78%;
-  height: 65%;
+  top: 8%;
+  left: 6%;
+  width: 88%;
+  height: 80%;
   background-color: #000;
   overflow: hidden;
-  padding: 18px 2px 4px 2px; /* More top padding, keep horizontal padding small */
+  padding: 15px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   background-image: linear-gradient(0deg, rgba(0,0,0,0.3) 50%, transparent 50%);
   background-size: 100% 4px;
-  box-shadow: inset 0 0 12px rgba(0, 255, 0, 0.2);
-  z-index: 1;
 }
 
 .terminal-content {
   width: 100%;
-  text-align: left;
 }
 
 .terminal-line {
-  font-family: 'VT323', monospace;
-  font-size: 0.85rem;
+  font-family: var(--font-terminal);
+  font-size: 1rem;
   color: #ff00aa;
-  margin-bottom: 2px;
+  margin-bottom: 8px;
   text-shadow: 0 0 8px rgba(255, 0, 170, 0.7);
   letter-spacing: 1px;
-  text-align: left;
-  padding-left: 18px; /* More left padding */
+}
+
+.terminal-line.cursor::after {
+  content: '|';
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ===== Contact Section ===== */
+.contact {
+  position: relative;
+  padding: var(--spacing-lg) 0;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact .section-title {
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-email a {
+  font-size: 1.5rem;
+  color: var(--neon-pink);
+  text-shadow: var(--glow-pink);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-subheading);
+}
+
+.contact-email a i {
+  margin-right: 10px;
+}
+
+.contact-email a:hover {
+  color: var(--neon-blue);
+  text-shadow: var(--glow-blue);
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: rgba(10, 10, 18, 0.9);
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid var(--neon-pink);
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--neon-pink) 20%, 
+    var(--neon-blue) 50%,
+    var(--neon-pink) 80%, 
+    transparent 100%);
+  opacity: 0.3;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.footer-logo-svg {
+  height: 40px;
+  width: auto;
+  max-width: 200px;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 170, 0.3));
+}
+
+.social-links {
+  display: flex;
+  margin-bottom: var(--spacing-md);
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--neon-pink);
+  margin: 0 var(--spacing-xs);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer !important;
+}
+
+.social-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 170, 0.2), transparent);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.social-link:hover {
+  background-color: rgba(255, 0, 170, 0.1);
+  box-shadow: var(--glow-pink);
+}
+
+.social-link:hover::before {
+  left: 100%;
+}
+
+.social-link i {
+  color: var(--neon-pink);
+  font-size: 1.2rem;
+}
+
+.copyright {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  font-family: var(--font-subheading);
+  margin-top: var(--spacing-md);
+}
+
+/* ===== Animations ===== */
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: var(--glow-pink);
+    box-shadow: var(--glow-pink);
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    box-shadow: none;
+    opacity: 0.8;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.hero-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.grid-line {
+  position: absolute;
+  background: rgba(255, 0, 170, 0.1);
+  z-index: 1;
+}
+
+.horizontal {
+  height: 1px;
+  transform: scaleY(0.5);
+}
+
+.vertical {
+  width: 1px;
+  transform: scaleX(0.5);
+}
+
+.fade-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-element.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }
+  
+  .projects-showcase {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(10, 10, 18, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    border-left: 1px solid var(--neon-pink);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links li {
+    margin: var(--spacing-sm) 0;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .projects-showcase {
+    grid-template-columns: 1fr;
+  }
+  
+  .terminal-line {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .logo-svg {
+    height: 80px;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .terminal-line {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
 }
 
 /* Boot sequence styling */
@@ -511,8 +824,8 @@ nav.scrolled {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: var(--primary-dark);
   z-index: 10000;
   display: flex;
@@ -525,8 +838,7 @@ nav.scrolled {
 .boot-content {
   font-family: var(--font-terminal);
   color: var(--neon-pink);
-  max-width: 80vw;
-  text-align: center;
+  max-width: 80%;
 }
 
 .boot-content p {
@@ -552,28 +864,32 @@ nav.scrolled {
   to { opacity: 1; }
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.contact .section-title {
-  display: block;
+/* Tandy 1000 Monitor Frame */
+.tandy-monitor {
+  position: relative;
   width: 100%;
+  max-width: 480px; /* Smaller size */
+  margin: 2rem auto;
+  background: url('../img/tandy border.png') no-repeat center center;
+  background-size: contain;
+  aspect-ratio: 1 / 1;
+}
+
+.tandy-screen {
+  position: absolute;
+  top: 16.5%;
+  left: 13%;
+  width: 74%;
+  height: 54%;
+  background: black;
+  color: #00ff88;
+  font-family: 'VT323', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 1rem;
+  box-shadow: inset 0 0 12px #0f0, 0 0 8px rgba(0,255,136,0.3);
 }
 
 

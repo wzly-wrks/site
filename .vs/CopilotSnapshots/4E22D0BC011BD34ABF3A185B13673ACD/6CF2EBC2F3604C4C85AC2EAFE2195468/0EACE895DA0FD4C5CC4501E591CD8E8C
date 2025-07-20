@@ -1,4 +1,4 @@
-/* weezly.works - Synthwave Theme
+﻿/* weezly.works - Synthwave Theme
    Created by SuperNinja AI - 2025 */
 
 /* ===== CSS Variables ===== */
@@ -481,7 +481,7 @@ nav.scrolled {
   height: 65%;
   background-color: #000;
   overflow: hidden;
-  padding: 18px 2px 4px 2px; /* More top padding, keep horizontal padding small */
+  padding: 4px 2px; /* Reduce vertical and horizontal padding */
   display: flex;
   align-items: flex-start;
   background-image: linear-gradient(0deg, rgba(0,0,0,0.3) 50%, transparent 50%);
@@ -497,84 +497,11 @@ nav.scrolled {
 
 .terminal-line {
   font-family: 'VT323', monospace;
-  font-size: 0.85rem;
+  font-size: 0.85rem; /* Smaller font size */
   color: #ff00aa;
   margin-bottom: 2px;
   text-shadow: 0 0 8px rgba(255, 0, 170, 0.7);
-  letter-spacing: 1px;
-  text-align: left;
-  padding-left: 18px; /* More left padding */
-}
-
-/* Boot sequence styling */
-.boot-sequence {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--primary-dark);
-  z-index: 10000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 1s ease;
-  visibility: visible;
-}
-
-.boot-content {
-  font-family: var(--font-terminal);
-  color: var(--neon-pink);
-  max-width: 80vw;
-  text-align: center;
-}
-
-.boot-content p {
-  margin: 10px 0;
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-  text-shadow: 0 0 5px rgba(255, 0, 170, 0.5);
-}
-
-.boot-content p:nth-child(1) { animation-delay: 0.2s; }
-.boot-content p:nth-child(2) { animation-delay: 0.7s; }
-.boot-content p:nth-child(3) { animation-delay: 1.2s; }
-.boot-content p:nth-child(4) { animation-delay: 1.7s; }
-.boot-content p:nth-child(5) { animation-delay: 2.2s; }
-.boot-content p:nth-child(6) { animation-delay: 2.7s; }
-
-.boot-complete {
-  opacity: 0;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.contact .section-title {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
+  letter-spacing:
 
 
 

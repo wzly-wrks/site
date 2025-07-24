@@ -177,11 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Terminal typing effect for Tandy screen
     const terminalLines = document.querySelectorAll('.terminal-line:not(.cursor)');
-    
+    const cursorLine = document.querySelector('.terminal-line.cursor');
+
     terminalLines.forEach((line, index) => {
         const originalText = line.textContent;
         line.textContent = '';
-        
+
         // Delay each line typing
         setTimeout(() => {
             let i = 0;
@@ -190,12 +191,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     line.textContent += originalText.charAt(i);
                     i++;
                     setTimeout(typeWriter, Math.random() * 50 + 30); // Random typing speed
+                } else if (index === terminalLines.length - 1 && cursorLine) {
+                    // After last line is typed, ensure cursor is visible and blinking
+                    cursorLine.style.visibility = 'visible';
                 }
             };
-            
             typeWriter();
         }, index * 1000); // Delay between lines
     });
+
+    // Ensure cursor is always visible and blinking
+    if (cursorLine) {
+        cursorLine.style.visibility = 'visible';
+    }
 });
 
 // Typing effect for the tagline

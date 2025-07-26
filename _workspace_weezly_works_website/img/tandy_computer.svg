@@ -1,0 +1,184 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .computer-body {
+      fill: #e8e8d8;
+      stroke: #a0a090;
+      stroke-width: 2px;
+    }
+    .screen-bezel {
+      fill: #404040;
+      stroke: #303030;
+      stroke-width: 2px;
+    }
+    .screen {
+      fill: #000000;
+    }
+    .keyboard {
+      fill: #d8d8c8;
+      stroke: #a0a090;
+      stroke-width: 1px;
+    }
+    .key {
+      fill: #b0b0a0;
+      stroke: #808070;
+      stroke-width: 1px;
+    }
+    .key-top {
+      fill: #c8c8b8;
+      stroke: none;
+    }
+    .logo-text {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      fill: #606050;
+    }
+    .vent {
+      fill: #c0c0b0;
+      stroke: #a0a090;
+      stroke-width: 1px;
+    }
+    .disk-drive {
+      fill: #404040;
+      stroke: #303030;
+      stroke-width: 1px;
+    }
+    .disk-slot {
+      fill: #202020;
+    }
+    .power-light {
+      fill: #ff3300;
+    }
+    .shadow {
+      fill: rgba(0,0,0,0.2);
+    }
+    .highlight {
+      fill: rgba(255,255,255,0.2);
+    }
+  </style>
+  
+  <!-- Computer body shadow -->
+  <rect class="shadow" x="110" y="60" width="600" height="400" rx="10" ry="10" />
+  
+  <!-- Computer body -->
+  <rect class="computer-body" x="100" y="50" width="600" height="400" rx="10" ry="10" />
+  
+  <!-- Highlight on top edge -->
+  <path class="highlight" d="M110 50 L690 50 L690 70 L110 70 Z" />
+  
+  <!-- Screen bezel -->
+  <rect class="screen-bezel" x="150" y="80" width="500" height="300" rx="5" ry="5" />
+  
+  <!-- Screen -->
+  <rect class="screen" x="170" y="100" width="460" height="260" />
+  
+  <!-- Disk drives -->
+  <rect class="disk-drive" x="150" y="390" width="150" height="40" rx="2" ry="2" />
+  <rect class="disk-slot" x="160" y="400" width="130" height="5" />
+  <rect class="disk-drive" x="320" y="390" width="150" height="40" rx="2" ry="2" />
+  <rect class="disk-slot" x="330" y="400" width="130" height="5" />
+  
+  <!-- Power light -->
+  <circle class="power-light" cx="600" y="410" r="5" />
+  
+  <!-- Keyboard section -->
+  <rect class="keyboard" x="150" y="450" width="500" height="120" rx="5" ry="5" />
+  
+  <!-- Keys -->
+  <g class="keys">
+    <!-- Function keys row -->
+    <rect class="key" x="160" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="162" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="190" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="192" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="220" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="222" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="250" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="252" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="280" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="282" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="310" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="312" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="340" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="342" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="370" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="372" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="400" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="402" y="460" width="21" height="18" rx="1" ry="1" />
+    <rect class="key" x="430" y="460" width="25" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="432" y="460" width="21" height="18" rx="1" ry="1" />
+    
+    <!-- Number row -->
+    <rect class="key" x="160" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="162" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="190" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="192" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="220" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="222" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="250" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="252" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="280" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="282" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="310" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="312" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="340" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="342" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="370" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="372" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="400" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="402" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="430" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="432" y="485" width="21" height="23" rx="1" ry="1" />
+    
+    <!-- QWERTY row -->
+    <rect class="key" x="170" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="172" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="200" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="202" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="230" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="232" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="260" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="262" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="290" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="292" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="320" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="322" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="350" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="352" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="380" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="382" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="410" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="412" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="440" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="442" y="515" width="21" height="23" rx="1" ry="1" />
+    
+    <!-- Space bar -->
+    <rect class="key" x="230" y="545" width="240" height="20" rx="2" ry="2" />
+    <rect class="key-top" x="232" y="545" width="236" height="18" rx="1" ry="1" />
+    
+    <!-- Arrow keys -->
+    <rect class="key" x="500" y="485" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="502" y="485" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="500" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="502" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="530" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="532" y="515" width="21" height="23" rx="1" ry="1" />
+    <rect class="key" x="470" y="515" width="25" height="25" rx="2" ry="2" />
+    <rect class="key-top" x="472" y="515" width="21" height="23" rx="1" ry="1" />
+  </g>
+  
+  <!-- Logo -->
+  <text x="500" y="410" class="logo-text">TANDY 1000</text>
+  
+  <!-- Vents -->
+  <g class="vents">
+    <rect class="vent" x="620" y="100" width="50" height="5" />
+    <rect class="vent" x="620" y="110" width="50" height="5" />
+    <rect class="vent" x="620" y="120" width="50" height="5" />
+    <rect class="vent" x="620" y="130" width="50" height="5" />
+    <rect class="vent" x="620" y="140" width="50" height="5" />
+    <rect class="vent" x="620" y="150" width="50" height="5" />
+    <rect class="vent" x="620" y="160" width="50" height="5" />
+    <rect class="vent" x="620" y="170" width="50" height="5" />
+  </g>
+</svg>
